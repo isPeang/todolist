@@ -4,7 +4,7 @@ import '../App.css';
 function TodoDayThree() {
     const [todo, setTodo] = useState();
     const [list, setList] = useState([]);
-    const [edit, setEdit] = useState();
+    const [edit, setEdit] = useState(); //edit เป็น state ที่ใช้เก็บ idex ของรายการที่ต้องการแก้ไข
 
     function onCreate() {
         if (edit !== null) { //แก้ไขโค้ดส่วนนี้เพื่อให้สามารถ edit ได้
@@ -24,8 +24,9 @@ function TodoDayThree() {
 
     function onEdit(index) {
         const todoValue = list.find((_, i) => i === index);
-        if (todoValue) setTodo(todoValue);
-        setEdit(index);
+        if (todoValue) //เมื่อเราได้รายการที่ต้องการแก้ไขมาแล้ว เราจะตรวจสอบว่ารายการนั้นมีค่าหรือไม่ หากมีค่าแสดงว่าเราเจอรายการที่ต้องการแล้ว
+        setTodo(todoValue); //จะใช้ setTodo เพื่อกำหนดค่า todo เป็นค่าของรายการนั้น ซึ่งก็คือข้อมูลที่ต้องการแก้ไข
+        setEdit(index); //กำหนดค่า edit เป็น index ของรายการที่ต้องการแก้ไข เพื่อระบุว่าตอนนี้เรากำลังแก้ไขรายการที่มี index นี้ในรายการที่ต้องทำ
     }
 
     function onDelete(index) {
