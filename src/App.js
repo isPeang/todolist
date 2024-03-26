@@ -1,21 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-import { Button, Input, Card, Form } from 'antd';
 import { useState } from 'react';
-
+import './App.css';
 import InputPage from './InputPage';
-import ButtonPage from './ButtonPage';
+import ListPage from './ListPage';
 
 function App() {
-  const [todo, setTodo] = useState('');
+  const [todo, setTodo] = useState();
   const [list, setList] = useState([]);
-  const [edit, setEdit] = useState();
 
-
+  const onCreate = () => {
+    // setList([...list ,{ id: Date.now(), text: todo}])
+    setList([...list ,todo])
+    console.log(list);
+    setTodo("");
+  }
 
   return (
     <>
-    <h1>Hello</h1>
+      <InputPage
+        value={todo} //ส่งข้อมูลไปให้ child component
+        onChange={e => setTodo(e.target.value)}
+        onCreate={onCreate}/>
+      <ListPage 
+        list={list}/>
     </>
   );
 }
