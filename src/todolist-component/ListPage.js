@@ -1,7 +1,7 @@
 function ListPage({list, }) {
     return (
         <>
-        {list.map((list, map))}
+        
         </>
     );
 };
