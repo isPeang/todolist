@@ -1,11 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import TodoPage from './component/TodoPage';
 
 function App() {
   return (
-    <div className="App">
-      <h1>main changes </h1>
-    </div>
+    <div className='App'>
+   <TodoPage/>
+   </div>
   );
 }
 
