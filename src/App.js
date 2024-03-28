@@ -1,11 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import TOdoPage from './todolistComponent/TodoPage';
 
 function App() {
   return (
-    <div className="App">
-      <h1>main changes </h1>
-    </div>
+    <TOdoPage />
   );
 }
 
