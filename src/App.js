@@ -5,9 +5,10 @@ import React from "react";
 
 function App() {
   return (
-    
+    <>
+    <title>todo</title>
       <TodoPage/>
-    
+      </>
   );
 }
 
