@@ -1,12 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import TodoList from "./page/TodoList";
 
 function App() {
-  return (
-    <div className="App">
-      <h1>main changes </h1>
-    </div>
-  );
+  return <TodoList />;
 }
 
 export default App;
