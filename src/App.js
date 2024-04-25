@@ -1,11 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
+import TodoList from './pages/todoList';
 
 function App() {
   return (
-    <div className="App">
-      <h1>main changes </h1>
-    </div>
+  <TodoList/>
   );
 }
 
