@@ -7,8 +7,8 @@ const TodoPage = () => {
     const [list, setList] = useState([]);
     const [edit, setEdit] = useState();
 
-    const onCreate = () => {
-        if (edit != null) {
+    const onCreate = () => { // ฟังก์ชัน onCreate ถูกเรียกใช้เมื่อผู้ใช้กดปุ่ม Create ที่เอาฟังก์ชันนี้ไปใส่ไว้ในปุ่ม
+        if (edit != null) { // ตรวจสอบว่าอยู่ในโหมด “แก้ไข” หรือไม่ // ถ้า edit มีค่าอยู่ = โหมดแก้ไข
             const newList = list.map((list, index) => {
                 if (index == edit) return todo;
                 return list;
