@@ -4,7 +4,7 @@ import { Button, Input, Card, Form } from 'antd';
 import { useState } from 'react';
 
 import InputPage from './InputPage';
-import ButtonPage from './ButtonPage';
+import ListPage from './ListPage';
 
 function App() {
   const [todo, setTodo] = useState('');
@@ -29,7 +29,7 @@ function App() {
     <>
       <Card title='Todo list' style={{ textAlign: 'center' }}>
         <InputPage value={todo} onChange={e => setTodo(e.target.value)} onCreate={onCreate}/>
-        <ButtonPage/>
+        <ListPage/>
       </Card>
     </>
   );
